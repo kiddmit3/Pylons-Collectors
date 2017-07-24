@@ -1,0 +1,26 @@
+VARIABLE
+crystalBlue = random number function between 1-10
+crystalGreen
+crystalPurple
+crystalRed
+targetNumber = choose from 40-60
+totalScore
+loss
+win
+
+FUNCTIONS
+random number function
+reset
+
+ORDER
+generate targetNumber
+generate crystal values
+assign values to crystals
+click crystal
+add random amount to totalScore
+display totalScore
+
+IF ELSE
+if totalScore === targetNumber, win++ and reset
+if else totalScore > targetNumber, loss++ and reset
+else totalScore < targetNumber, continue

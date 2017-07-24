@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Crystals Collector Game</title>
+</head>
+
+<!-- <link rel="stylesheet" href="style/reset.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="style/style.css">
+<script type="text/javascript" src="javascript/game.js"></script> -->
+
+<body>
+
+<img class = "crystals" id="crystal-blue"  value=0 src="assets/images/blue.jpg">
+<img class = "crystals" id="crystal-green"  value=0 src="assets/images/green.jpg">
+<img class = "crystals" id="crystal-purple"  value=0 src="assets/images/purple.png">
+<img class = "crystals" id="crystal-red"  value=0 src="assets/images/red.jpg">
+	
+</body>
+
+<style type="text/css">
+.crystals {
+	width: 200px;
+	height: 200px;
+}
+
+</style>
+
+<script>
+
+var crystalBlue;
+var crystalGreen;
+var crystalPurple;
+var crystalRed;
+var targetNumber;
+var totalScore;
+var win;
+var loss;
+
+function reset(){
+	targetNumber = randyTarget();
+	totalScore = 0;
+	crystalBlue = randyCrystal();
+	crystalGreen = randyCrystal();
+	crystalPurple = randyCrystal();
+	crystalRed = randyCrystal();
+	assignCrystalValue();
+
+}
+
+function randyCrystal(){
+	var randy = Math.floor(Math.random() * 9) + 2;
+	return randy;
+}
+
+function randyTarget(){
+ 	var randy = Math.floor(Math.random() * 20) + 40;
+ 	return randy;
+}
+
+function assignCrystalValue(){
+	$("#crystal-blue").val()
+	document.getElementById("crystal-blue").val=+crystalBlue;
+	document.getElementById("crystal-green").val=+crystalGreen;
+	document.getElementById("crystal-red").val=+crystalRed;
+}
+
+reset();
+
+
+console.log("Target Number: " + targetNumber);
+console.log("Blue: " + crystalBlue);
+console.log("Green: " + crystalGreen);
+console.log("Purple: " + crystalPurple);
+console.log("Red: " + crystalRed);
+
+// $(".crystals").on("click", function() {
+
+// 		if (totalScore === targetNumber){
+// 			win++;
+// 			reset();
+// 		}
+// 			else if (totalScore > targetNumber){
+// 				loss++;
+// 				reset();
+// 			}
+// });
+
+</script>
+</html>
